@@ -1,0 +1,27 @@
+// to compute the number of kilometres travelled per gallon
+#include<iostream>
+using namespace std;
+
+const double value = 0.264179;
+
+void calc(double litres, double km)
+{
+	double gallons = 0, total = 0;
+	gallons = litres * value;
+	total = km / gallons;
+	cout << "The number of kilometres per gallons is " << total << endl;
+}
+
+int main()
+{
+	double litres, km;
+	cout << "Enter the amount of petrol consumed by your car in litres" << endl;
+	cin >> litres;
+	cout << "Enter the distance travelled by your car in KM" << endl;
+	cin >> km;
+
+	calc(litres, km);
+
+	return 0;
+}
+
